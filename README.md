@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NOIR — Premium Fashion Store
 
-## Getting Started
+Минималистичный премиум e-commerce магазин одежды. Demo-проект для портфолио.
 
-First, run the development server:
+## Стек
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **State:** Zustand (корзина с persist)
+- **Images:** Unsplash (бесплатные фото)
+- **Deploy:** Vercel
+
+## Возможности
+
+- Каталог с фильтрами по категориям
+- Страница товара с галереей и выбором размера
+- Корзина (Zustand + localStorage)
+- Оформление заказа (симуляция)
+- Адаптивная вёрстка (mobile-first)
+- Анимации и hover-эффекты
+
+## Запуск локально
 
 ```bash
+git clone https://github.com/Kroktin/noir-store
+cd noir-store
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Открой [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Структура
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/
+│   ├── page.tsx              # Hero
+│   ├── catalog/page.tsx      # Каталог с фильтрами
+│   ├── products/[id]/        # Страница товара + 404
+│   └── checkout/page.tsx     # Оформление заказа
+├── components/
+│   ├── Header.tsx
+│   ├── CartDrawer.tsx
+│   └── ProductCard.tsx
+├── lib/products.ts           # Данные и типы
+└── store/cartStore.ts        # Zustand корзина
+```
