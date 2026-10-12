@@ -2,6 +2,8 @@
 
 Минималистичный премиум e-commerce магазин одежды. Demo-проект для портфолио.
 
+**Demo:** https://noir-store-demo.netlify.app
+
 ## Стек
 
 - **Framework:** Next.js 14 (App Router)
@@ -9,7 +11,7 @@
 - **Styling:** Tailwind CSS
 - **State:** Zustand (корзина с persist)
 - **Images:** Unsplash (бесплатные фото)
-- **Deploy:** Vercel
+- **Deploy:** Netlify
 
 ## Возможности
 
